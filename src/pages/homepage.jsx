@@ -9,7 +9,7 @@ const HomePage = () =>{
         <div className="bg-color">
             <StepBox />
             <ServiceDetail />
-            Hello
+            Hi
             {/* <Link to="Test"><button>test</button></Link> */}
         </div>
     )
