@@ -1,7 +1,7 @@
 import React from "react"
 import "../css/stepBox.css"
 
-const stepBox =()=>{
+const StepBox =()=>{
     return(
         <div className="stepBox">
                 
@@ -39,4 +39,4 @@ const stepBox =()=>{
         </div>
     )
 }
-export default stepBox
+export default StepBox

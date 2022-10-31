@@ -7,6 +7,7 @@ import ServiceSelect from "../components/serviceSelect"
 const HomePage = () =>{
     return(
         <div className="bg-color">
+
             For Test Component
             <StepBox />
             Test
