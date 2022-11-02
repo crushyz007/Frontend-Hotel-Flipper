@@ -15,7 +15,7 @@
     color: #2E67F8;
     font-size: 20px;
     position: relative;
-    padding-top:65px;
+    padding-top:50px;
     padding-left:90px;
 }
 .service-scopeSelect{
@@ -52,4 +52,22 @@
     font-size: 20px;
     padding-left: 68px;
     padding-top: 15px;
+}
+.service-DropDown{
+    color: #464555;
+    font-family: 'Mitr', sans-serif;
+    font-size: 18px;
+    width: 950px;
+    height: 50px;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.service-DatePicker{
+    color: #464555;
+    font-family: 'Mitr', sans-serif;
+    width: 250px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: 20px;
 }

@@ -48,6 +48,10 @@
     font-size: 80px;
     color: #2E67F8;
 }
+.grayColor{
+    /* font-size: 80px; */
+    color:#C8C8C9 !important;
+}
 .fi-rr-list{
     font-size: 45px;
     position: absolute;

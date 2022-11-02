@@ -1,12 +1,12 @@
 import React from "react"
 import "../css/stepBox.css"
 
-const StepBox =()=>{
+const StepBox1 =()=>{
     return(
         <div className="stepBox">
                 
             <div>
-            <i class="fi fi-rs-circle ">
+            <i class="fi fi-rs-circle">
                 
                 <i class="fi fi-rr-list"></i>
                 <div className="linestepBox"></div>
@@ -39,4 +39,4 @@ const StepBox =()=>{
         </div>
     )
 }
-export default StepBox
+export default StepBox1
