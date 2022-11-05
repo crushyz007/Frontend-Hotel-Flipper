@@ -1,15 +1,24 @@
 import React from "react";
 import "../css/DetailPage.css"
-import StepBox from "../components/stepBox"
 import ServiceDetail from "../components/serviceDetail"
 import ServiceSelect from "../components/serviceSelect"
+import demoService from "./demoService";
 const DetailPage=()=>{
+    console.log(demoService)
+
     return(
         <div >
         <div className="DetailPage-container">
-            ทำไมมันไม่ตรงกลางวะฟว
-            <ServiceDetail />
-            <ServiceSelect />
+            { demoService.map((item) => (
+                    <div >
+                <ServiceDetail detail={item}/>
+                </div>
+            ))}
+            {/* {demoService.map((item)=>{
+                <p>i</p>
+            })} */}
+            {/* <ServiceDetail />*/}
+            <ServiceSelect /> 
         </div>
         </div>
     )

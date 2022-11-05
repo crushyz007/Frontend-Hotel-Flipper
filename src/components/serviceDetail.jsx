@@ -4,14 +4,15 @@ import { useState } from "react"
 import "../css/serviceDetail.css"
 import axios from 'axios'
 const ServiceDetail =(props)=>{
+    const {detail} = props
+    // const [serviceName,setServiceName] = useState("")
+    // const [serviceScope,setServiceScope] = useState("")
+    // const [serviceCondition,setServiceCondition] = useState("")
+    // const [serviceList,setServiceList] = useState("")
 
-    const [serviceName,setServiceName] = useState("")
-    const [serviceScope,setServiceScope] = useState("")
-    const [serviceCondition,setServiceCondition] = useState("")
-    const [serviceList,setServiceList] = useState("")
-
-    const[currentService,setCurrentService] = useState({name:'',scope:'',condition:'',list:''})
+    const[currentService,setCurrentService] = useState({name:detail.name,scope:detail.scope,condition:detail.condition,list:detail.list})
     
+
     // function fetchService (){
 
     //     const requestURL = axios.get('')
@@ -39,7 +40,6 @@ const ServiceDetail =(props)=>{
             // setServiceScope(res.data)
             // setServiceCondition(res.data)
             // setServiceList(res.data)
-
             setCurrentService(res.data)
         })
         .catch(err=>{
@@ -61,10 +61,11 @@ const ServiceDetail =(props)=>{
                     {/* {serviceName.map(serviceName=> <div key={serviceName})} */}
                     {/* {serviceName} */}
                     {/* {currentService.name} */}
-                    ชื่อบริการ
+                    {currentService.name}
                 </div>
 
-                <div className="service-pic"><img width="970" height="400" src="" alt=""/></div>
+                <div className="service-pic"><img width="970" height="400" src="" alt=""/>
+                </div>
 
                 <div className="service-Topic">ขอบเขตการทำงาน</div>
                 <div className="service-scope"><i class="fi fi-ss-bulb"></i>
