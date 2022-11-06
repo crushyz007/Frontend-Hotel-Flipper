@@ -30,8 +30,8 @@ const QAPage =()=>{
         e.preventDefault();
         setIsSubmit(true)
         axios
-        .post('url',
-        {token:localStorage.getItem("token"),
+        // .post('url',
+        // {token:localStorage.getItem("token"),
         //มี 2แบบ ไม่รู้ถูกมั้ย งง55555555555555555
         //แบบที่ 1
         // q1:formData.q1,
@@ -40,7 +40,7 @@ const QAPage =()=>{
         // q4:formData.q4  
         //แบบที่ 2
         // q:[formData.q1,formData.q2,formData.q3,formData.q4]
-        })
+        // })
         .catch(function (error) {
             console.log(error);
         });
