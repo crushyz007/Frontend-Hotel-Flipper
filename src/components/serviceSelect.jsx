@@ -1,6 +1,6 @@
 import React from "react"
 import { useEffect } from "react";
-// import Select from 'react-select'
+import { Link } from "react-router-dom"
 import { useState } from "react"
 import DatePicker from "react-datepicker";
 import setHours from "date-fns/setHours";
@@ -130,12 +130,12 @@ const ServiceSelect =(props)=>{
                 placeholderText="Select your time"
             /> */}
 
-            <div className="AddService-button">
-                <div 
-                className="AddService-font"
-                onClick={handleSubmit}
-                >เพิ่มเข้ารายการ</div> 
-            </div>
+                <div className="AddService-button">
+                    <div 
+                    className="AddService-font"
+                    onClick={handleSubmit}
+                    >เพิ่มเข้ารายการ</div> 
+                </div>
         </div>
         
         </div>
