@@ -1,10 +1,10 @@
 import React from "react"
 import { useEffect } from "react";
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { useState } from "react"
 import DatePicker from "react-datepicker";
-import setHours from "date-fns/setHours";
-import setMinutes from "date-fns/setMinutes";
+// import setHours from "date-fns/setHours";
+// import setMinutes from "date-fns/setMinutes";
 import 'react-datepicker/dist/react-datepicker.css'
 import "../css/serviceSelect.css"
 
@@ -41,7 +41,7 @@ const ServiceSelect =(props)=>{
     //     setSelectTime(e)
     //     console.log(selectTime)
     // }
-
+    
     const handleSubmit = e =>{
         setIsSubmit(true)
         // console.log(isSubmit)

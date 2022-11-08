@@ -17,7 +17,7 @@ const HomePage = () =>{
             <ServiceSelect />
             <Link to="detailpage"><button>test</button></Link>
             <Link to="qapage"><button>qa</button></Link>
-
+            <Link to="paymentpage"><button>payment</button></Link>
         </div>
     )
 
