@@ -1,0 +1,22 @@
+.feedbackBox-Box{
+    width:1025px ;
+    height: 210px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.feedbackBox-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 30px;
+}
+.feedbackBox-commentPos{
+    padding-top: 20px;
+}
+.feedbackBox-font{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    font-size: 20px;
+}

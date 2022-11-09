@@ -18,6 +18,7 @@ const HomePage = () =>{
             <Link to="detailpage"><button>test</button></Link>
             <Link to="qapage"><button>qa</button></Link>
             <Link to="paymentpage"><button>payment</button></Link>
+            <Link to="feedbackpage"><button>rating</button></Link>
         </div>
     )
 

@@ -5,7 +5,7 @@ import StepBox from '../components/stepBox'
 import demoOrder from'./demoOrder'
 const PaymentPage = () =>{
     console.log(demoOrder)
-    //ลอง demo ไม่ขึ้นอ่า T-T
+    //ลอง demo order แล้วไม่ขึ้นอ่า T-T
 
     return(
         <div>

@@ -6,9 +6,11 @@ import "../css/serviceOrder.css"
 
 const ServiceOrder = (props) =>{
     
+    // demo ไม่ขึ้นนนนนนน
+
     // const {order} = props
     // const[currentOrder,setCurrentOrder] = useState({id:order.id,name:order.name,price:order.price})
-    const[orders,SetOrder] = useState({id:'',name:'',price:'',total:''})
+    const[orders,SetOrder] = useState({number:'',service:'',price:'',total:''})
 
     //get data จาก back
     useEffect(()=>{
@@ -23,10 +25,10 @@ const ServiceOrder = (props) =>{
     
         <div className="orderBox">
             
-            <div className="order-ID">รหัส {orders.id} </div>
+            <div className="order-ID">รหัส {orders.number} </div>
                 
             <div className="order-gridcolumn">
-                <div className="order-detail">{orders.name}</div>
+                <div className="order-detail">{orders.service}</div>
                 <div className="order-price">{orders.price}</div>
             </div>
 
