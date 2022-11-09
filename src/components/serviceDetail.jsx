@@ -11,26 +11,6 @@ const ServiceDetail =(props)=>{
     // const [serviceList,setServiceList] = useState("")
 
     const[currentService,setCurrentService] = useState({name:detail.name,scope:detail.scope,condition:detail.condition,list:detail.list})
-    
-
-    // function fetchService (){
-
-    //     const requestURL = axios.get('')
-        
-    //     axios.all([requestName,requestScope,requestCondition,requestList])
-        
-    //     .then(axios.spread((...res)=>
-    //         setCurrentService({'name':res[0],'scope':res[1],'condition':res[2],'list':res[3]})))
-    
-    //     }
-    
-    // useEffect(()=>{
-    //     fetchService()
-        
-    //     .catch(err=>{
-    //         console.log(err)
-    //     })
-    // })
 
     useEffect(()=>{
         axios
@@ -47,20 +27,10 @@ const ServiceDetail =(props)=>{
         })
     },[])
 
-    // const data = currentService.map(((currentService,index)=>{
-    //     return(
-    //         <td>{currentService.name}</td>
-    //         <td>{currentService.scope}</td>
-    //         // <p>{currentService.condition}</p>
-    //         // <p>{currentService.list}</p>
-    //     )
-    // })
     return(
             <div className="detailBox">
                 <div className="service-name">
-                    {/* {serviceName.map(serviceName=> <div key={serviceName})} */}
                     {/* {serviceName} */}
-                    {/* {currentService.name} */}
                     {currentService.name}
                 </div>
 

@@ -13,7 +13,7 @@ const HomePage = () =>{
             <StepBox />
             {/* <StepBox1 /> */}
             Test
-            {/* {/* <ServiceDetail /> */}
+            {/* <ServiceDetail /> */}
             <ServiceSelect />
             <Link to="detailpage"><button>test</button></Link>
             <Link to="qapage"><button>qa</button></Link>

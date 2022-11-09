@@ -10,14 +10,10 @@ const DetailPage=()=>{
         <div >
         <div className="DetailPage-container">
             { demoService.map((item) => (
-                    <div >
-                <ServiceDetail detail={item}/>
-                </div>
+                <div ><ServiceDetail detail={item}/></div>
             ))}
-            {/* {demoService.map((item)=>{
-                <p>i</p>
-            })} */}
-            {/* <ServiceDetail />*/}
+            
+            {/* <ServiceDetail /> */}
             <ServiceSelect /> 
         </div>
         </div>

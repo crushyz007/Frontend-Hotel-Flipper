@@ -1,7 +1,7 @@
 import React from "react"
 import { useEffect } from "react";
-// import { Link } from "react-router-dom"
 import { useState } from "react"
+import axios from 'axios'
 import DatePicker from "react-datepicker";
 // import setHours from "date-fns/setHours";
 // import setMinutes from "date-fns/setMinutes";
@@ -12,14 +12,14 @@ const ServiceSelect =(props)=>{
     
     // เดี๋ยวมาเขียนเพิ่มoptionแบบmapเอา
     // const {detail} = props
-    // // const []
     // const[defaultService,setDefaultService] = useState({option:detail.defaultService})
 
+    // const {select} = props
+    // const[currentSelect,setCurrentSelect] = useState({name:select.name})
+    
     const [selectService,setSelectservice] = useState('')
     const [selectDate,setSelectDate] = useState('')
-    const [selectTime,setSelectTime] = useState(
-        // setHours(setMinutes(new Date(), 30), 17)
-        )
+    // const [selectTime,setSelectTime] = useState(setHours(setMinutes(new Date(), 30), 17))
     const[isSubmit,setIsSubmit] = useState(false)
     // const[details,setDetails] = useState({service:'',date:'',time:''})
     
@@ -41,28 +41,21 @@ const ServiceSelect =(props)=>{
     //     setSelectTime(e)
     //     console.log(selectTime)
     // }
-    
-    const handleSubmit = e =>{
+
+    //ส่งให้ back ตรงนี้
+    const sendToCart = e =>{
+        e.preventDefault();
         setIsSubmit(true)
         // console.log(isSubmit)
     }
 
     useEffect(()=>{
-        if (selectDate && selectService && selectTime && isSubmit===true){
+        if (selectDate && selectService && isSubmit===true){
             console.log(isSubmit)
             console.log(selectService)
-            console.log(selectDate)
-            console.log(selectTime)
-            // console.log(detail.selectService)
-            // console.log(details)
-        }
-        // if(isSubmit===true){
-        //     console.log(details)
-        // }
+            console.log(selectDate)}
     },[])
-    // function getData(detail){
-    //     setSe
-    // }
+    
     // const options = [
     //     { value: 'chocolate', label: 'Chocolate' },
     //     { value: 'strawberry', label: 'Strawberry' },
@@ -79,7 +72,7 @@ const ServiceSelect =(props)=>{
             value={selectService} 
             // value={details.service}
             onChange={handleSelectService}>  
-                <option value='Apple'> Apple</option>  
+                {/* <option value={currentSelect.name}> {currentSelect.name}</option>   */}
                 <option value='Mango'> Mango</option>  
                 <option value='Banana'>Banana </option> 
             </select>
@@ -133,7 +126,7 @@ const ServiceSelect =(props)=>{
                 <div className="AddService-button">
                     <div 
                     className="AddService-font"
-                    onClick={handleSubmit}
+                    onClick={sendToCart}
                     >เพิ่มเข้ารายการ</div> 
                 </div>
         </div>
