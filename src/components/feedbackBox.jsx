@@ -8,11 +8,17 @@ const FeedbackBox =() =>{
             <div className="feedbackBox-grid feedbackBox-font">
                 <div>รูป</div>
                 <div>Name
-                <div className="feedbackBox-commentPos">Rating</div>
+                {/* <div className="feedbackBox-commentPos">RatingRatingRatingRatingRatingRatingRatingRatingRatingRatingRatingRatingRating</div> */}
                 </div>
                 <div>Rate</div>
+                
+            </div>
+            <div className="grace">
+            gracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegrgracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegraceacegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegrace
+                {/* <div className="gracefont">gracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegrace</div> */}
             </div>
         </div>
+
     </div>
     )
 }
