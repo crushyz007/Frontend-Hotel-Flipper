@@ -2,6 +2,7 @@ import React from "react"
 import '../css/feedbackBox.css'
 
 const FeedbackBox =() =>{
+    
     return(
     <div>
         <div className="feedbackBox-Box">
@@ -13,7 +14,7 @@ const FeedbackBox =() =>{
                 <div>Rate</div>
                 
             </div>
-            <div className="grace">
+            <div className="feedbackBox-comment">
             gracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegrgracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegraceacegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegrace
                 {/* <div className="gracefont">gracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegrace</div> */}
             </div>

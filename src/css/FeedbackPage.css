@@ -17,6 +17,26 @@
     color: #2E67F8;
     font-size: 50px;
 }
+.FeedbackPage-fontTopic2{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    padding-top: 20px;
+    font-size: 35px;
+}
+.FeedbackPage-fontTopic3{
+    font-family: 'Mitr', sans-serif;
+    color: #464555;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-left: -460px;
+}
+.FeedbackPage-fontTopic4{
+    font-family: 'Mitr', sans-serif;
+    color: #464555;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-left: -480px;
+}
 .FeedbackPage-Circle1{
     height: 400px;
     width: 400px;
@@ -35,10 +55,54 @@
     margin-left: 1250px;
     margin-top:230px;
 }
-.test3{
+/* .test3{
     width: 250px;
     max-width:250px; 
     height: 250px;
     display: inline-block;
     background-color: black;
+} */
+.FeedbackPage-line{
+    width:1050px;
+    height: 2px;
+    background-color: #DEDEDE;
+    margin-top: 30px;
+}
+.FeedbackPage-input{
+    width: 580px;
+    height: 271px;
+    background-color: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-family: 'Mitr', sans-serif;
+    color: #464555;
+    font-size: 15px;
+    resize: none;
+    margin-top: 10px;
+    
+}
+.FeedbackPage-radio-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 100px;
+    font-family: 'Mitr', sans-serif;
+    color: #464555;
+    font-size: 18px;
+}
+.FeedbackPage-button{
+    width: 298px;
+    height: 74px;
+    background-color: #5B81FF;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Mitr', sans-serif;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.FeedbackPage-button:hover{
+    background: #396bea;
 }
