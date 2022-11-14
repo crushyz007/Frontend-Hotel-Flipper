@@ -6,15 +6,18 @@ import '../css/FeedbackPage.css'
 const FeedbackPage =()=>{
     const[feedback,setFeedback] = useState('')
     const[isSubmit,setIsSubmit] = useState(false)
+    const[score,setScore] = useState('')
 
-    //feedback ยังไม่ขึ้น console
-    //ยังไม่ได้กำหนด max ตัวอักษร
-    //ยังไม่ได้ทำอะไรกะradio เลยย
-    //ไอfeedback boxด้วยจ้า
+    //maxminตัวอักษร
+    //see all
     const handleChange =e=>{
         setFeedback(e.target.value)
     }
+    const handleScore=e=>{
+        setScore(e.target.value)
+    }
 
+    //ส่งให้backตรงนี้
     const submitHandler=e=>{
         e.preventDefault();
         setIsSubmit(true)
@@ -23,6 +26,7 @@ const FeedbackPage =()=>{
     useEffect(()=>{
         if (isSubmit===true){
             console.log(feedback)
+            console.log(score)
         }
     })
 
@@ -35,9 +39,10 @@ const FeedbackPage =()=>{
             <div className="FeedbackPage-container">
                 <div className="FeedbackPage-fontTopic">ทำไมต้อง</div>
                 <div className="FeedbackPage-fontTopic">Hotel Flipper</div>
+                see all
                 <FeedbackBox />
                 <FeedbackBox />
-                {/* <FeedbackBox /> */}
+                <FeedbackBox />
             
                 <div className="FeedbackPage-line"></div>
                 <div className="FeedbackPage-fontTopic2">ส่งฟีดแบ็กให้เราเพื่อปรับปรุงคุณภาพให้ดีขึ้น</div>
@@ -49,31 +54,31 @@ const FeedbackPage =()=>{
                 
                 <div className="FeedbackPage-radio-grid">
                     <div>
-                        <input type="radio"></input>
+                        <input type="radio"  name="score" value="one" onChange={handleScore}></input>
                         1
                     </div>
 
                     <div>
-                        <input type="radio"></input>
+                        <input type="radio" name="score" value="two" onChange={handleScore}></input>
                         2
                     </div>
 
                     <div>
-                        <input type="radio"></input>
+                        <input type="radio"  name="score" value="three" onChange={handleScore}></input>
                         3
                     </div>
 
                     <div>
-                        <input type="radio"></input>
+                        <input type="radio"  name="score" value="four" onChange={handleScore}></input>
                         4
                     </div>
 
                     <div>
-                        <input type="radio"></input>
+                        <input type="radio"  name="score" value="five" onChange={handleScore}></input>
                         5
                     </div>
                 </div>
-                <button className="FeedbackPage-button" type="Submit" onSubmit={submitHandler}>ส่งฟีดแบ็กเลย ! </button>
+                <button className="FeedbackPage-button" type="Submit" onClick={submitHandler}>ส่งฟีดแบ็กเลย ! </button>
             {/* </form>  */}
             </div>
         </div>
