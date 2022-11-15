@@ -5,9 +5,9 @@ import FeedbackBox from "../components/feedbackBox"
 import '../css/FeedbackPage.css'
 const FeedbackPage =()=>{
     const[feedback,setFeedback] = useState('')
-    const[isSubmit,setIsSubmit] = useState(false)
     const[score,setScore] = useState('')
-
+    const[isSubmit,setIsSubmit] = useState(false)
+    
     //maxminตัวอักษร
     //see all
     const handleChange =e=>{
