@@ -3,18 +3,23 @@ import { useEffect } from "react"
 import { useState } from "react"
 import '../css/servicePayment.css'
 import mastercard from '../pic/visa.png'
-// import promptpay from '../pic/promptpay.png'
 import pp from '../pic/pp.jpg'
 import pp2 from '../pic/pp2.png'
-
+import QRCODE from 'qrcode'
+import PaymentModal from '../components/paymentModal'
 const ServicePayment = () =>{
 
     //ยังไมไ่ด้กำหนด validate mastercard
-    const[state,SetState]=useState('')
+    <ServicePayment text="hello" />
+    const[state,setState]=useState('')
     const[isSubmit,setIsSubmit] = useState(false)
     const[details,setDetails] = useState({cardnum:"",name:"",expireddate:"",securecode:""})
+    //set Qrcode
+    const[src,setSrc] = useState('')
+    //st Modal
+    const[openModal,setOpenModal]=useState(false)
     const handleChange =e=>{    
-        SetState(e.target.value)
+        setState(e.target.value)
     }
     
     const handleChangePayment = (e) =>{
@@ -26,14 +31,17 @@ const ServicePayment = () =>{
     const submitHandler=e=>{
         e.preventDefault();
         setIsSubmit(true)
+        setOpenModal(true)
     }
 
+    //น่าจะต้อง get qrcode จากback แล้วเอามา setSrc ตรงนี้
     useEffect(()=>{
         if(isSubmit===true){
             console.log(state)
             console.log(details)
         }
-    })
+        QRCODE.toDataURL("น้องเกรซน่ารัก").then((setSrc))
+    },[])
 
     return(
         <div className="paymentBox">
@@ -46,18 +54,21 @@ const ServicePayment = () =>{
 
                 {state==='1' && (
                 <div className="payment-radiopost">
-                    <div className="payment-promptpay">
+                    <div className="payment-promptpayBox">
                     {/* /* <img src={promptpay} alt="Logo" className="" ></img>  */}
-                    <div className="payment-promptpayHeader">
-                    <img src={pp} alt="Logo" width="150" height="60" className="payment-proptpaylogoPos" ></img>
-                    <img src={pp2} alt="Logo" width="90" height="30" className="payment-proptpaylogoPos2" ></img>
-
-                    </div>
+                        <div className="payment-promptpayHeader">
+                            <div className="payment-promptpayPos">
+                            <img src={pp} alt="Logo" width="150" height="60" className="payment-promptpaylogoPos" ></img>
+                            <img src={pp2} alt="Logo" width="90" height="30" className="payment-promptpaylogoPos2" ></img>
+                            <div><img src={src} width="250" height="250" className="payment-qrcodePos"></img></div>
+                            <div className="payment-namePos">Hotel Flipper</div>
+                            <div>บัญชี: Nattawadee T.</div>
+                            </div>
+                        </div>
+                        
                     </div>
                 
                 </div>)}
-
-                {/* <div>qr-code</div> */}
             </div>
 
             <div className="payment-font">
@@ -76,20 +87,15 @@ const ServicePayment = () =>{
                         <input type="text" name="expireddate" value={details.expireddate} onChange={handleChangePayment} className="payment-input2" placeholder="01/19"></input>
                         </div>
                         <div>Security code
-                        <input type="text" name="securecode" value={details.securecode} onChange={handleChangePayment}className="payment-input2" placeholder="***"></input>
+                        <input type="password" name="securecode" value={details.securecode} onChange={handleChangePayment}className="payment-input2" placeholder="***"></input>
                         </div>
                     </div>
                 </div>
                 )}
             </div>
             <button type="submit" className="payment-button" onClick={submitHandler}>เสร็จสิ้น</button>
-        
-        
-            
-        
-
+                {openModal===true && <PaymentModal closeModal={setOpenModal}/>}
         </div>
-        
     )
 }
 export default ServicePayment

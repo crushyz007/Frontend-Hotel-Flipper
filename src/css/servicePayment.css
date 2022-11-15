@@ -43,9 +43,9 @@
 .payment-button:hover{
     background: #396bea;
 }
-.payment-promptpay{
+.payment-promptpayBox{
     width: 350px;
-    height: 502px;
+    height: 460px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -56,15 +56,28 @@
     width: 350px;
     height:70px;
     background: #0E3E68;
+    color: #000000;
     border-radius: 5px 5px 0px 0px;
 }
-.payment-proptpaylogoPos{
-    margin-top: 5px;
-    margin-left: 100px;
+.payment-promptpayPos{
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
 }
-.payment-proptpaylogoPos2{
+.payment-promptpaylogoPos{
     margin-top: 5px;
-    margin-left: 130px;
+    /* margin-left: 100px; */
+}
+.payment-promptpaylogoPos2{
+    margin-top: 15px;
+    /* margin-left: 130px; */
+}
+.payment-qrcodePos{
+    margin-top: 10px;
+    /* margin-left: 48px; */
+}
+.payment-namePos{
+    margin-top: 5px;
 }
 .payment-creditcardBox{
     width: 420px;
@@ -86,6 +99,10 @@
     border-radius: 3px;
     margin-left:20px;
     margin-top: 5px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 18px;
+    color: #464555;
+    padding: 10px 5px;
 }
 .payment-input2{
     width: 150px;
@@ -95,6 +112,10 @@
     border-radius: 3px;
     /* margin-left:20px; */
     margin-top: 5px;
+    font-family: 'Mitr', sans-serif;
+    font-size: 18px;
+    color: #464555;
+    padding: 10px 5px;
 }
 .payment-input:placeholder-shown{
     font-family: 'Mitr', sans-serif;
@@ -107,7 +128,7 @@
     padding: 10px 5px;
 }
 .mastercard{
-    margin-left: 90px;
+    margin-left: 73px;
     margin-top: 20px;
 }
 .payment-pos{
