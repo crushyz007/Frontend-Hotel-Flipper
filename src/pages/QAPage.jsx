@@ -2,11 +2,10 @@ import React from "react";
 import { useState,useEffect } from "react"
 import { Link } from "react-router-dom"
 import "../css/QAPage.css"
-import StepBox from "../components/stepBox"
+import StepBox1 from "../components/stepBox1"
 import axios from "axios";
 
 const QAPage =()=>{
-    //link ไปหน้า payment ไม่ได้ งง
     const [formData,setFormData] = useState({
         q1:'',
         q2:'',
@@ -50,8 +49,9 @@ const QAPage =()=>{
     
     return(
         <div>
+            {/* <form onSubmit={sendAnsToDB}> */}
             <div className="QAPage-container">
-                <StepBox />
+                <StepBox1 />
                 <div className="QAPage-box">
                     <div className="QAPage-Topicfont">คำถามเพิ่มเติม</div>
 
@@ -101,13 +101,19 @@ const QAPage =()=>{
                     </div>
                     {/* <Link to="paymentpage"><button></button></Link> */}
                     {/* <Link to="paymentpage"> */}
-                        <div className="QAPage-button" onClick={sendAnsToDB} >
-                        <div className="QAPage-buttonFont">ดำเนินการต่อ</div>
-                    </div>
+                    {/* <Link to="/paymentpage"><button className="QAPage-button QAPage-buttonFont">ดำเนินการต่อ</button></Link> */}
+                        
+                        <div className="QAPage-button " onClick={sendAnsToDB}>
+                        <Link to="/paymentpage">
+                            <div className="QAPage-buttonFont">ดำเนินการต่อ</div>
+                        </Link>
+                        </div>
+                        
                     {/* </Link> */}
                     {/* <p>{formData.q1}</p> */}
                 </div>
             </div>
+            {/* </form> */}
         </div>
     )
 }

@@ -5,14 +5,14 @@ const StepBox =()=>{
     return(
         <div className="stepBox">
                 
-            <div>
+            {/* <div>
             <i class="fi fi-rs-circle ">
                 
                 <i class="fi fi-rr-list"></i>
                 <div className="linestepBox"></div>
             </i>
             <p className="stepBox-font stepBox-font1">รายการ</p>
-            </div>
+            </div> */}
 
             <div>
             <i class="fi fi-rs-circle">

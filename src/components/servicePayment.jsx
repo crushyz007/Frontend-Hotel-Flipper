@@ -62,7 +62,7 @@ const ServicePayment = () =>{
                             <img src={pp2} alt="Logo" width="90" height="30" className="payment-promptpaylogoPos2" ></img>
                             <div><img src={src} width="250" height="250" className="payment-qrcodePos"></img></div>
                             <div className="payment-namePos">Hotel Flipper</div>
-                            <div>บัญชี: Nattawadee T.</div>
+                            <div>บัญชี: บริษัทโฮเต็ลฟลิปเปอร์จำกัด</div>
                             </div>
                         </div>
                         
@@ -93,6 +93,28 @@ const ServicePayment = () =>{
                 </div>
                 )}
             </div>
+
+            <div className="payment-font">    
+                <input type="radio" className="payment-radiopost" name="state" value="3" onChange={handleChange}></input>
+                ชำระด้วยธนาคารปั๊ป 
+                {state==='3' && (
+                <div>
+                    <div className="payment-radiopost">
+                    <div className="payment-NewBankBox">
+                            <div className="payment-promptpayPos">
+                            <div><img src={src} width="250" height="250" className="payment-qrcodePos"></img></div>
+                            <div className="payment-namePos">ธนาคารปั๊ป</div>
+                            <div>บัญชี: ปุ๊ปปั๊ปคุง</div>
+                            </div>
+                        
+                    </div>
+                
+                </div>
+                </div>
+                
+                )}   
+            </div>    
+
             <button type="submit" className="payment-button" onClick={submitHandler}>เสร็จสิ้น</button>
                 {openModal===true && <PaymentModal closeModal={setOpenModal}/>}
         </div>

@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import FeedbackBox from "../components/feedbackBox"
 import '../css/FeedbackPage.css'
+import { Link } from "react-router-dom"
 const FeedbackPage =()=>{
     const[feedback,setFeedback] = useState('')
     const[score,setScore] = useState('')

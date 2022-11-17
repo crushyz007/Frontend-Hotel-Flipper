@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"
 import "../css/homepage.css"
 import StepBox from "../components/stepBox"
-// import StepBox1 from "../components/stepBox"
+import StepBox1 from "../components/stepBox1"
 import ServiceDetail from "../components/serviceDetail"
 import ServiceSelect from "../components/serviceSelect"
 import PaymentModal from "../components/paymentModal";
@@ -12,7 +12,7 @@ const HomePage = () =>{
 
             For Test Component
             <StepBox />
-            {/* <StepBox1 /> */}
+            <StepBox1 />
             Test
             {/* <ServiceDetail /> */}
             <ServiceSelect />

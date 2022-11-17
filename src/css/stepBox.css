@@ -6,7 +6,7 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
 
 .stepBox{
-    width: 998px;
+    width: 650px;
     height: 150px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -45,7 +45,13 @@
     margin-top: -60px;
     margin-left: 80px;
 }
-
+.linestepBoxGray{
+    width:120px;
+    height: 5px;
+    background-color: #C8C8C9;
+    margin-top: -60px;
+    margin-left: 80px;
+}
 .fi-rs-circle{
     font-size: 80px;
     color: #2E67F8;
@@ -78,4 +84,7 @@
     position: absolute;
     margin-left: -63px;
     margin-top: 20px;
+}
+.gray{
+    color: #C8C8C9 !important;
 }
