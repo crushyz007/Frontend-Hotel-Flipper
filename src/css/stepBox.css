@@ -6,14 +6,14 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
 
 .stepBox{
-    width: 650px;
+    width: 680px;
     height: 150px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin-top: 35px;
     margin-bottom: 30px;
 }
@@ -87,4 +87,22 @@
 }
 .gray{
     color: #C8C8C9 !important;
+}
+.cartPos{
+    padding-left: -100px;
+}
+.newlinestepBox{
+    width:120px;
+    height: 5px;
+    background-color: #2E67F8;
+}
+.newstepBox-font{
+    font-family: 'Mitr', sans-serif;
+    color: #2E67F8;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.threePos{
+    margin-left: 70px;
+    margin-top: 20px;
 }
