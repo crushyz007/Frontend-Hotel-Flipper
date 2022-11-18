@@ -1,6 +1,6 @@
 import React from "react";
 import { useState,useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import "../css/QAPage.css"
 import StepBox1 from "../components/stepBox1"
 import axios from "axios";
@@ -18,6 +18,8 @@ const QAPage =()=>{
         const{name,value} = e.target;
         setFormData({...formData,[name]:value})
     }
+    
+    const changePage = () => Navigate('/paymentpage')
 
     useEffect(()=>{
             if (isSubmit===true){
@@ -99,21 +101,24 @@ const QAPage =()=>{
                         
                         <div className="radio-font">รีสอร์ท</div>
                     </div>
-                    {/* <Link to="paymentpage"><button></button></Link> */}
-                    {/* <Link to="paymentpage"> */}
-                    {/* <Link to="/paymentpage"><button className="QAPage-button QAPage-buttonFont">ดำเนินการต่อ</button></Link> */}
-                        
-                        <div className="QAPage-button " onClick={sendAnsToDB}>
-                        <Link to="/paymentpage">
-                            <div className="QAPage-buttonFont">ดำเนินการต่อ</div>
+
+
+                    <div className="QAPage-buttonPos " onClick={sendAnsToDB}>
+                        <Link to="/paymentpage" style={{ textDecoration: 'none' }}>
+                            <div className="QAPage-button ">
+                                <div className="QAPage-buttonFont">หน้าตะกร้า</div>
+                            </div>
                         </Link>
-                        </div>
-                        
-                    {/* </Link> */}
-                    {/* <p>{formData.q1}</p> */}
+
+                        <Link to="/paymentpage" style={{ textDecoration: 'none' }}>
+                            <div className="QAPage-button QAPage-button2" >
+                                <div className="QAPage-buttonFont">ชำระเงิน</div>
+                            </div>
+                        </Link>
+                    </div>
+
                 </div>
             </div>
-            {/* </form> */}
         </div>
     )
 }
