@@ -40,7 +40,6 @@ const ServicePayment = (props) =>{
         // qrcode()
     }
     
-    //น่าจะต้อง get qrcode จากback แล้วเอามา setSrc ตรงนี้
     useEffect(()=>{
         // if(isSubmit===true){
         //     // console.log(state)

@@ -11,13 +11,6 @@ import listdata from "../pages/ServiceDetail.json";
 
 const ServiceSelect =(props)=>{
     
-    // เดี๋ยวมาเขียนเพิ่มoptionแบบmapเอา
-    // const {detail} = props
-    // const[defaultService,setDefaultService] = useState({option:detail.defaultService})
-
-    // const {select} = props
-    // const[currentSelect,setCurrentSelect] = useState({name:select.name})
-    
     const [selectService,setSelectservice] = useState('')
     const [selectDate,setSelectDate] = useState('')
     // const [selectTime,setSelectTime] = useState(setHours(setMinutes(new Date(), 30), 17))

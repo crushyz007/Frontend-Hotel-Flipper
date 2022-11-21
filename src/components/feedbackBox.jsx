@@ -36,7 +36,7 @@ const FeedbackBox =(props) =>{
                 </div>
                 
             </div>
-            <div className="feedbackBox-comment">
+            <div className="feedbackBox-comment feedbackBox-commentPos">
                 <div className="gracefont">
                     {props.ment}
                     {/* gracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegracegrace */}
