@@ -8,6 +8,7 @@
     flex-direction: column;
     margin-top: 10px;
     padding-bottom: 30px;
+    white-space: pre-wrap;
 }
 .order-ID{
     font-family: 'Mitr', sans-serif;
@@ -43,8 +44,9 @@
     font-family: 'Mitr', sans-serif;
     color: #464555 ;
     font-size: 20px;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-left: 100px;
+    white-space: pre-wrap;
 }
 
 .order-totalprice{
@@ -52,6 +54,7 @@
     color: #464555 ;
     font-size: 20px;
     padding-left: 280px;
-    padding-top: 50px;
+    padding-top: 30px;
     /* padding-bottom: 5px; */
+    white-space: pre-wrap;
 }

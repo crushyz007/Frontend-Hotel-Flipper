@@ -7,6 +7,7 @@ import DatePicker from "react-datepicker";
 // import setMinutes from "date-fns/setMinutes";
 import 'react-datepicker/dist/react-datepicker.css'
 import "../css/serviceSelect.css"
+import listdata from "../pages/ServiceDetail.json";
 
 const ServiceSelect =(props)=>{
     
@@ -61,7 +62,7 @@ const ServiceSelect =(props)=>{
     //     { value: 'strawberry', label: 'Strawberry' },
     //     { value: 'vanilla', label: 'Vanilla' }
     // ]
-    
+    const labelList = listdata.Dropdown
 
     return(
         <div>
@@ -73,8 +74,11 @@ const ServiceSelect =(props)=>{
             // value={details.service}
             onChange={handleSelectService}>  
                 {/* <option value={currentSelect.name}> {currentSelect.name}</option>   */}
-                <option value='Mango'> Mango</option>  
-                <option value='Banana'>Banana </option> 
+                {/* <option value='Mango'> Mango</option>  
+                <option value='Banana'>Banana </option>  */}
+                {labelList.map((option) => (
+                        <option value={option.value}>{option.list}</option>
+                ))}
             </select>
             
             <div className="service-TopicSelect">วันที่และเวลาที่ต้องการรับบริการ</div>

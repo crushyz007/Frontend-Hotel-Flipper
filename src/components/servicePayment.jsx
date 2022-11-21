@@ -7,7 +7,8 @@ import pp from '../pic/pp.jpg'
 import pp2 from '../pic/pp2.png'
 import QRCODE from 'qrcode'
 import PaymentModal from '../components/paymentModal'
-const ServicePayment = () =>{
+import axios from 'axios'
+const ServicePayment = (props) =>{
 
     //ยังไมไ่ด้กำหนด validate mastercard
     <ServicePayment text="hello" />
@@ -16,10 +17,14 @@ const ServicePayment = () =>{
     const[details,setDetails] = useState({cardnum:"",name:"",expireddate:"",securecode:""})
     //set Qrcode
     const[src,setSrc] = useState('')
+    const[srcP,setSrcP] = useState('')
+
     //st Modal
     const[openModal,setOpenModal]=useState(false)
-    const handleChange =e=>{    
+    
+    const handleChange =async (e)=>{    
         setState(e.target.value)
+        //await qrcode()
     }
     
     const handleChangePayment = (e) =>{
@@ -32,16 +37,60 @@ const ServicePayment = () =>{
         e.preventDefault();
         setIsSubmit(true)
         setOpenModal(true)
+        // qrcode()
     }
-
+    
     //น่าจะต้อง get qrcode จากback แล้วเอามา setSrc ตรงนี้
     useEffect(()=>{
-        if(isSubmit===true){
-            console.log(state)
-            console.log(details)
-        }
-        QRCODE.toDataURL("น้องเกรซน่ารัก").then((setSrc))
+        // if(isSubmit===true){
+        //     // console.log(state)
+        //     // console.log(details)
+        // }
+        //qrcode()
+        qrcodeP()
     },[])
+
+    const [qrcodeData,setQrcodeData] = useState("")
+
+    const qrcode = async() =>{
+        const data = {
+            OId:"6370daaf7209bb6743349e23",
+            bankID:"KBank",
+            amount:Number(props.totalPrice)
+        }
+
+        const res = await axios.post('http://localhost:3001/api/payment/QRpayment',data)
+        .then(res=>{
+            
+            // setQrcodeData(res.data.qrCode)
+            QRCODE.toDataURL(res.data.qrCode).then((setSrc))
+            // console.log("hi2")
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+        console.log(res)
+    }
+    
+    const qrcodeP = async() =>{
+        const data = {
+            OId:"6370daaf7209bb6743349e23",
+            bankID:"4QU",
+            amount:Number(props.totalPrice)
+        }
+
+        const res = await axios.post('http://localhost:3001/api/payment/QRpayment',data)
+        .then(res=>{
+            
+            // setQrcodeData(res.data.qrCode)
+            QRCODE.toDataURL(res.data.qrcode).then((setSrcP))
+            console.log(res.data)
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+        console.log(res)
+    }
 
     return(
         <div className="paymentBox">
@@ -102,7 +151,7 @@ const ServicePayment = () =>{
                     <div className="payment-radiopost">
                     <div className="payment-NewBankBox">
                             <div className="payment-promptpayPos">
-                            <div><img src={src} width="250" height="250" className="payment-qrcodePos"></img></div>
+                            <div><img src={srcP} width="250" height="250" className="payment-qrcodePos"></img></div>
                             <div className="payment-namePos">ธนาคารปั๊ป</div>
                             <div>บัญชี: ปุ๊ปปั๊ปคุง</div>
                             </div>

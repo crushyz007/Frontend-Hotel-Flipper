@@ -12,21 +12,20 @@ const ServiceDetail =(props)=>{
 
     const[currentService,setCurrentService] = useState({name:detail.name,scope:detail.scope,condition:detail.condition,list:detail.list})
 
-    useEffect(()=>{
-        axios
-        .get('')
-        .then(res=>{
-            // setServiceName(res.data)
-            // setServiceScope(res.data)
-            // setServiceCondition(res.data)
-            // setServiceList(res.data)
-            setCurrentService(res.data)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    },[])
-
+    // useEffect(()=>{
+    //     axios
+    //     .get('')
+    //     .then(res=>{
+    //         // setServiceName(res.data)
+    //         // setServiceScope(res.data)
+    //         // setServiceCondition(res.data)
+    //         // setServiceList(res.data)
+    //         setCurrentService(res.data)
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // },[])
     return(
             <div className="detailBox">
                 <div className="service-name">
